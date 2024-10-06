@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
 
   <style>
     :root, html, body {
-      margin: 0;
+      margin: 60px;
       padding: 0;
       background-color: var(--ddd-accent-1);
     }
@@ -19,23 +20,33 @@
     counter-app {
       margin: var(--ddd-spacing-2);
       border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+      border-radius: 200px;
     }
     counter-app:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
+      box-shadow: var(--ddd-theme-default-discoveryCoral);
     }
     #example {
-      --counter-app-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
+      --counter-app-font-size: var(25px);
+      background-color: var(--ddd-theme-default-navy80);
+      color: var(--ddd-theme-default-white);
     }
   </style>
   <title>counter-app</title>
 </head>
 
 <body>
-  <div id="demo">
-    <h1>counter-app</h1>
+    <div id="demo">
+      <h1>Counter App</h1>
+      <counter-app id="example" title="THE COUNTER" counter="16" min="10" max="25"></counter-app>
+    </div>
+    <counter-app id="example" title="THE OTHER COUNTER" counter="16" min="10" max="25"></counter-app>
+  </div>
+    <script type="module" src="./src/counter-app.js"></script>
+    
+   
+  </body>
+  
+
     <!-- this is going to do whatever the tag's defaults are -->
     <h2>Default</h2>
     <counter-app></counter-app>
